@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/control.css">
+    <script src="static/js/script.js" defer></script>
+    <title>{{node_name}} - control</title>
+</head>
+
+<body>
+    <p id=info>
+        <input type=text value="{{node_name}}" maxlength="{{name_max_char}}">
+        <span>{{hostname}}</span>
+    </p>
+    <fieldset id=machine-control>
+        <legend>Machine control</legend>
+        <button data-cmd=reboot>Reboot</button>
+        <button data-cmd=shutdown>Shutdown</button>
+        <button data-cmd=hostname>New hostname</button>
+    </fieldset>
+    <fieldset id=player-control>
+        <legend>Player control</legend>
+        <button data-cmd=play>Play</button>
+        <button data-cmd=stop>Stop</button>
+        <button data-cmd=prev>Previous</button>
+        <button data-cmd=next>Next</button>
+        <button data-cmd=quit>Quit</button>
+        <div>
+            <span>Volume</span>
+            <input data-cmd=volume type=range min=0 max=320 value={{volume}}>
+        </div>
+        <div>
+            <button data-cmd=goto>Goto</button>
+            <input type=text placeholder="video #">
+        </div>
+    </fieldset>
+    <fieldset id=player-settings>
+        <legend>Additional settings</legend>
+        <div data-settings=modules>
+            <p>Video output module</p>
+            <label><input value=any type=radio name=player-mode {{ 'checked' if module=="any" }}>any</label>
+            <label><input value=gles2 type=radio name=player-mode {{ 'checked' if module=="gles2" }}>gles2</label>
+        </div>
+        <div data-settings=options>
+            <p>Launch options</p>
+            <label><input value=-L type=checkbox {{ 'checked' if "-L" in options}}>Loop</label>
+            <label><input value=-R type=checkbox {{ 'checked' if "-R" in options}}>Repeat</label>
+        </div>
+        <div data-settings=remote-nodes>
+            <p>Remote nodes</p>
+            <textarea cols="25" rows="5"
+                placeholder="Enter IP addresses or hostnames separated by space">{{remote_nodes}}</textarea>
+        </div>
+    </fieldset>
+    <fieldset id=upload-wrapper>
+        <legend>Upload media</legend>
+        <button>Upload</button>
+        <label>
+            <input type=file accept=".{{media_extensions|join(', .')}}" multiple>
+            <span>Select files</span>
+        </label>
+    </fieldset>
+    <fieldset id=media-list data-empty=true>
+        <legend>Available files</legend>
+        <button data-id=delete>Delete selected</button>
+        <button data-id=update>Update order</button>
+        <p data-id=used-space>{{used_space|round|int}}</p>
+        <table>
+            <thead>
+                <tr>
+                    <th><input type=checkbox data-id=select-all></th>
+                    <th>File name</th>
+                    <th>#</th>
+                    <th>Order</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div data-empty>No files</div>
+    </fieldset>
+
+</body>
+
+</html>

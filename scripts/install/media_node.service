@@ -1,0 +1,11 @@
+[Unit]
+Description=Media node interface
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Restart=always
+ExecStart=
+
+[Install]
+WantedBy=default.target

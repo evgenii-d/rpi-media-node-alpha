@@ -1,0 +1,12 @@
+[Unit]
+Description=VLC + RC Interface
+After=graphical.target
+
+[Service]
+Restart=always
+Environment="DISPLAY=:0"
+ExecStart=
+
+[Install]
+WantedBy=graphical.target
+WantedBy=default.target
