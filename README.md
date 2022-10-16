@@ -1,6 +1,6 @@
 # RPi Media Node
 
-Image for Raspberry Pi 4 based on Debian 10 (buster), which allows using Raspberry Pi in kiosk mode to play video and audio files.
+Image for *Raspberry Pi 4* based on Debian 10 (buster), which allows using Raspberry Pi in kiosk mode to play video and audio files.
 
 # Usage
 1. Go to [releases section](https://github.com/evgenii-d/rpi-media-node/releases)
