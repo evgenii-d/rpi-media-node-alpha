@@ -4,9 +4,9 @@ Image for *Raspberry Pi 4* based on Debian 10 (buster), which allows using Raspb
 
 # Usage
 1. Go to [releases section](https://github.com/evgenii-d/rpi-media-node/releases)
-2. Download the `.7z` file.
+2. Download the `.7z` file
 3. Extract image and flash SD using [etcher](https://www.balena.io/etcher/) or similar software
-4. Raspberry Pi must be connected to the network via cable.
+4. Raspberry Pi must be connected to the network via cable
 
 After that, Raspberry Pi can be found on the network either by IP address (DHCP) or via mdns (zeroconf). Web app port - 5000
 <br>
