@@ -19,9 +19,9 @@ Something like this:
 * By default you can upload `.mp4`, `.webm`, `.mkv`, `.mp3` and `.wav` files.
 * Videos encoded with *H.265* codec are *preferred*. In this case Raspberry Pi 4 can handle videos in 4k (3840x2160) 60fps.
 * If you want to use both micro HDMI ports (mirror mode), then 
-  * encode videos with *H.264* (only FullHD 60fps supported)
-  * check `gles2` in *Additional settings*
-  * reboot node or press `Quit` button in *Player control*
+  * encode videos with *H.264* (only FullHD video supported)
+  * check `gles2` in *Additional settings* section
+  * reboot node or press `Quit` button in *Player control* section
 * Audio output is available via 3.5mm jack
 
 # Overview
