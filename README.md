@@ -70,4 +70,4 @@ Something like this:
 |DELETE|/media|remove media files|
 
 # Web app overview
-![web app](https://github.com/evgenii-d/rpi-media-node/blob/main/media-node-contol.png)
+![web app](media-node-contol.webp)
