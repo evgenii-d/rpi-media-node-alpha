@@ -8,9 +8,9 @@ Image for *Raspberry Pi 4* based on Debian 10 (buster), which allows using Raspb
 3. Extract image and flash SD using [etcher](https://www.balena.io/etcher/) or similar software
 4. Raspberry Pi must be connected to the network via cable
 
-After that, Raspberry Pi can be found on the network either by IP address (DHCP) or via mdns (zeroconf). Web app port - 5000
+After that, Raspberry Pi can be found on the network either by IP address (DHCP) or via mdns (zeroconf).
 <br>
-Something like this:
+Web app port - 5000. Should be something like this:
 * IP - http://192.168.1.201:5000/
 * zeroconf - http://node-1f33c68f.local:5000/
 <br>
